@@ -23,6 +23,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.models.base import Base, TimestampMixin, UUIDPrimaryKeyMixin
 
 if TYPE_CHECKING:
+    from app.models.exercise import Exercise
     from app.models.goal import Goal
     from app.models.weight_entry import WeightEntry
 
@@ -69,6 +70,12 @@ class User(UUIDPrimaryKeyMixin, TimestampMixin, Base):
     )
     weight_entries: Mapped[list[WeightEntry]] = relationship(
         "WeightEntry",
+        back_populates="user",
+        cascade="all, delete-orphan",
+        lazy="dynamic",
+    )
+    exercises: Mapped[list[Exercise]] = relationship(
+        "Exercise",
         back_populates="user",
         cascade="all, delete-orphan",
         lazy="dynamic",

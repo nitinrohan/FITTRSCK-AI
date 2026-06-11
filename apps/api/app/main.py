@@ -33,7 +33,7 @@ from app.exceptions import (
     validation_exception_handler,
 )
 from app.logging_config import configure_logging
-from app.routers import auth, goals, health, users, weight
+from app.routers import auth, exercises, goals, health, users, weight
 
 logger = logging.getLogger(__name__)
 
@@ -113,6 +113,9 @@ def create_app() -> FastAPI:
 
     # weight router — log, list, get, update, delete weight entries.
     app.include_router(weight.router)
+
+    # exercises router — system library + user custom exercises.
+    app.include_router(exercises.router)
 
     # Future routers (each mounts its own prefix):
     # app.include_router(workouts.router)
