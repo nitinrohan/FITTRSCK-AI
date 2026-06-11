@@ -247,10 +247,12 @@ Ensure the source volumes are mounted (check `docker-compose.yml`). Restart with
 | Phase | Focus | Status |
 |---|---|---|
 | 0 | Workspace audit | ✅ Complete |
-| 1 | Foundation (this) | ✅ Complete |
-| 2 | Authentication and user profiles | 🔜 Next |
-| 3 | Workout tracking | Planned |
-| 4 | Nutrition and wellness | Planned |
-| 5 | Measurements, goals, dashboard | Planned |
-| 6 | AI assistant | Planned |
-| 7 | Privacy, export, polish | Planned |
+| 1 | Foundation | ✅ Complete |
+| 2 | Authentication and user profiles | ✅ Complete |
+| 3 | Exercise library | ✅ Complete |
+| 4 | Workout templates | 🔜 Next |
+| 5 | Workout logging and history | Planned |
+| 6 | Nutrition and wellness | Planned |
+| 7 | Measurements, goals, dashboard | Planned |
+| 8 | AI assistant | Planned |
+| 9 | Privacy, export, polish | Planned |
